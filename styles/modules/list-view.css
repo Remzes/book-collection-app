@@ -1,0 +1,14 @@
+.list-view {
+    width: 1660px;
+    margin: 0 auto;
+    /*background-color: #3CB371;*/
+    padding: 20px;
+}
+
+.list-view:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}

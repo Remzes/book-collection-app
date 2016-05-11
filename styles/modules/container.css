@@ -1,0 +1,11 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container {
+    width: 1640px;
+    padding: 50px;
+    /*border: 1px black solid;*/
+    font-family: Calibri, sans-serif;
+}
