@@ -13,7 +13,7 @@
 .list-item-description li p {
     width: 300px;
     float: left;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5em;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .list-item-description-buttons{
-    margin: 220px 0 0 50px;
+    margin: 240px 0 0 50px;
     clear: both;
 }
 
@@ -31,7 +31,7 @@
     height: 50px;
     font-size: 20px;
     /*font-weight: bold;*/
-    background-color: transparent;
+    background-color: #fff;
     border: 1px #7f7f7f solid;
     font-family: Algerian, sans-serif;
     transition: all ease-in-out .3s;
