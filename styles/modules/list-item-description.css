@@ -35,6 +35,7 @@
     border: 1px #7f7f7f solid;
     font-family: Algerian, sans-serif;
     transition: all ease-in-out .3s;
+    outline: none;
 }
 
 .list-item-description-buttons button:hover {
