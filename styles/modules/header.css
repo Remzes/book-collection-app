@@ -1,0 +1,23 @@
+header {
+    margin: 0 auto;
+    width: 90%;
+    border-bottom: 1px #000 solid;
+    padding: 5px 0 10px 0;
+    margin-bottom: 30px;
+}
+
+header:after{
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+header p {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    /*font-weight: bold;*/
+    color: #037bac;
+}

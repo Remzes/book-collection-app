@@ -4,8 +4,8 @@
 }
 
 .container {
-    width: 1640px;
-    padding: 50px;
+    /*width: 1640px;*/
+    padding: 0 50px 5px 50px;
     /*border: 1px black solid;*/
     font-family: Calibri, sans-serif;
 }

@@ -1,0 +1,49 @@
+.navigation {
+    margin: 0 auto;
+    width: 754px;
+    border: 1px #fff solid;
+    margin-top: 10px;
+    padding: 25px;
+    transition: all ease-in-out .3s;
+}
+
+.navigation:hover {
+    border: 1px #000 solid;
+}
+
+.menu:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.menu li{
+    list-style-type: none;
+    float: left;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #3e6181;
+    border: 2px #00b4ea solid;
+    padding: 10px;
+    transition: all ease-in-out .1s;
+}
+
+.menu li a:hover {
+    background-color: #000;
+    color: #00BFFF;
+}
+
+.navigation p {
+    width: 200px;
+    float: left;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
