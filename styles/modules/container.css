@@ -8,4 +8,13 @@
     padding: 0 50px 5px 50px;
     /*border: 1px black solid;*/
     font-family: Calibri, sans-serif;
+    margin: 0 auto;
+}
+
+.container:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
 }

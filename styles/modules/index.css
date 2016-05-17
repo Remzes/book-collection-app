@@ -5,4 +5,6 @@
 @import "navigation.css";
 @import "header.css";
 @import "footer.css";
-@import "add-new-book.css";
+@import "add-new-book-page.css";
+@import "add-book.css";
+@import "add-new-book-page-error-p.css"
