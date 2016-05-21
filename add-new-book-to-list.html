@@ -10,13 +10,13 @@
     <p>My Book Collection - Add New Book</p>
 </header>
 <div class="container">
-    <form class="add-book">
+    <form class="add-book" action="" method="post" id="register-form" novalidate="novalidate">
         <img src="images/HowTheSteelWasTempered.jpg" alt="">
         <ul class="list-item-description list-item-description-margin ">
             <li>
                 <p class="desc-in-form">Title: </p>
 
-                <input type="text" id="title-of-book"> <!-- TITLE INPUT -->
+                <input type="text" name="title_of_book" id="title-of-book"> <!-- TITLE INPUT -->
             </li>
             <p class="error" id="title-uppercase-letter">The first letter must be uppercase</p>
 
@@ -70,6 +70,8 @@
 <footer class="fixed-footer">
     <p>Copyright &copy;2016 - Viktor Salnichenko</p>
 </footer>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/jquery-validation/dist/jquery.validate.js"></script>
 <script src="scripts/form-add-validation.js"></script>
 </body>
 </html>

@@ -25,8 +25,8 @@ function checkTheValidityOfInput(){ //check the data type of the pages input
     var pages = document.getElementById("pages-of-book");
     var errorPages = document.getElementById("pages-data-type");
     //console.log(parseInt(pages.value));
-    //console.log(pages.value);
-    if (parseInt(pages.value) != pages.value){
+    console.log(pages.value);
+    if (pages.value && parseInt(pages.value) != pages.value){
         errorPages.style.display = "block";
     } else {
         errorPages.style.display = "none";
@@ -46,7 +46,7 @@ function checkTheMaxLengthOfPagesInput(){ //check the max length of pages input
 function checkTheMinLengthOfPagesInput(){ //check the min length of pages input
     var pages = document.getElementById("pages-of-book");
     var errorPages = document.getElementById("pages-min-length");
-    if (pages.value <= 0){
+    if (pages.value <= 0 && pages.value){
         errorPages.style.display = "block";
     } else {
         errorPages.style.display = "none";
@@ -74,5 +74,15 @@ function setUpPage(){
 
 window.addEventListener("load", setUpPage, false);
 
-
-
+////form validation rules
+//$("#register-form").validate({
+//    rules: {
+//        task_of_book: "required"
+//    },
+//    messages: {
+//        task_of_book: "Please enter your firstname"
+//    },
+//    submitHandler: function(form) {
+//        form.submit();
+//    }
+//});
