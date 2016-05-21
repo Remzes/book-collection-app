@@ -22,6 +22,7 @@
 
 .list-item img {
     margin-left: 5px;
+    float: left;
 }
 
 .list-item a{
