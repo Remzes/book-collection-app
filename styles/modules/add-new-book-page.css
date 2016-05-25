@@ -1,6 +1,7 @@
 .add-new-book {
     width: 784px;
     margin: 0 auto;
+    margin-bottom: 30px;
     padding: 20px 10px 20px 10px;
     border: 1px transparent solid;
     text-align: center;
@@ -9,6 +10,14 @@
 
 .add-new-book label {
     font-size: 20px;
+}
+
+.inner-content:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
 }
 
 .add-new-book button {
