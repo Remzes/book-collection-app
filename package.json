@@ -4,6 +4,7 @@
   "version": "v. 0.01",
   "dependencies": {
     "jquery": "^2.2.4",
-    "jquery-validation": "^1.15.0"
+    "jquery-validation": "^1.15.0",
+    "lodash": "^4.15.0"
   }
 }

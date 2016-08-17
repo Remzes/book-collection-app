@@ -1,0 +1,45 @@
+.background-gray-color {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.85);
+    pointer-events: none;
+    transition: all ease-in-out 0.3s;
+}
+
+.pop-up {
+    width: 850px;
+    height: 500px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 1001;
+    left: 35%;
+    top: 50%;
+    /*-webkit-transform: translate(-50%, -50%);*/
+    /*-moz-transform: translate(-50%, -50%);*/
+    /*-ms-transform: translate(-50%, -50%);*/
+    /*-o-transform: translate(-50%, -50%);*/
+    /*transform: translate(-50%, -50%);*/
+    margin-left: -175px;
+    margin-top: -250px;
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+    line-height: 2.5em;
+    font-family: 'Calibri', sans-serif;
+    color: white;
+    /*transition: all ease-in-out 0.3s;*/
+}
+
+.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.background-gray-color.active {
+    width: 100%;
+    height: 100%;
+}

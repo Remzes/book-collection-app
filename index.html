@@ -8,138 +8,145 @@
 <body>
 <header>
     <p>My Book Collection - List of Books</p>
+    <button class="edit-title-button" id="edit-title-of-page">Edit Title</button>
 </header>
 <nav class="navigation">
     <p>Sort by:</p>
     <ul class="menu">
-        <li><a href="#">Год публикации</a></li>
-        <li><a href="#">Заголовок</a></li>
+        <li><a href="#" id="sort-by-publication-year">Год публикации</a></li>
+        <li><a href="#" id="sort-by-title">Заголовок</a></li>
     </ul>
 </nav>
 <div class="container">
-    <ul class="list-view">
-        <li class="list-item">
-            <a href="https://en.wikipedia.org/wiki/How_the_Steel_Was_Tempered" target="_blank">
-                <img src="images/HowTheSteelWasTempered.jpg" alt="">
-                <ul class="list-item-description" id="list-view-index-html">
-                    <li>
-                        <p class="desc">Title: </p>
+    <ul class="list-view" id="list-container">
+        <!--<li class="list-item">-->
+            <!--<a href="https://en.wikipedia.org/wiki/How_the_Steel_Was_Tempered" target="_blank">-->
+                <!--<img src="images/HowTheSteelWasTempered.jpg" alt="">-->
+                <!--<ul class="list-item-description" id="list-view-index-html">-->
+                    <!--<li>-->
+                        <!--<p class="desc">Title: </p>-->
 
-                        <p class="title">How the Steel Was Tempered</p>
-                    </li>
+                        <!--<p class="title">How the Steel Was Tempered</p>-->
+                    <!--</li>-->
 
-                    <li>
-                        <p class="desc">Authors: </p>
+                    <!--<li>-->
+                        <!--<p class="desc">Authors: </p>-->
 
-                        <p class="authors">Nikolai Ostrovsky</p>
-                    </li>
+                        <!--<p class="authors">Nikolai Ostrovsky</p>-->
+                    <!--</li>-->
 
-                    <li>
-                        <p class="desc">Pages: </p>
+                    <!--<li>-->
+                        <!--<p class="desc">Pages: </p>-->
 
-                        <p class="pages">298</p>
-                    </li>
+                        <!--<p class="pages">298</p>-->
+                    <!--</li>-->
 
-                    <li>
-                        <p class="desc">Publication Company:</p>
+                    <!--<li>-->
+                        <!--<p class="desc">Publication Company:</p>-->
 
-                        <p class="publication">Young Guard</p>
-                    </li>
+                        <!--<p class="publication">Young Guard</p>-->
+                    <!--</li>-->
 
-                    <li>
-                        <p class="desc">Year of Publication:</p>
+                    <!--<li>-->
+                        <!--<p class="desc">Year of Publication:</p>-->
 
-                        <p class="year">1932</p>
-                    </li>
+                        <!--<p class="year">1932</p>-->
+                    <!--</li>-->
 
-                    <li>
-                        <p class="desc">Date of Edition: </p>
+                    <!--<li>-->
+                        <!--<p class="desc">Date of Edition: </p>-->
 
-                        <p class="edition">1936</p>
-                    </li>
+                        <!--<p class="edition">1936</p>-->
+                    <!--</li>-->
 
-                    <li>
-                        <p class="desc">ISBN: </p>
+                    <!--<li>-->
+                        <!--<p class="desc">ISBN: </p>-->
 
-                        <p class="isbn">0-7147-0585-3</p>
-                    </li>
+                        <!--<p class="isbn">0-7147-0585-3</p>-->
+                    <!--</li>-->
 
-                    <li class="list-item-description-buttons">
-                        <div class="manage">
-                            <a href="#"><button class="edit">Edit</button></a>
-                            <a href="#"><button class="remove">Delete</button></a>
-                        </div>
-                    </li>
-                </ul>
-            </a>
-        </li>
+                    <!--<li class="list-item-description-buttons">-->
+                        <!--<div class="manage">-->
+                            <!--<a href="#"><button class="edit" >Edit</button></a>-->
+                            <!--<a href="#"><button class="remove" data-id="1">Delete</button></a>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</a>-->
+        <!--</li>-->
 
-        <li class="list-item">
-            <a href="https://en.wikipedia.org/wiki/War_and_Peace">
-                <img src="images/WarAndPeace.jpg" alt="">
-                <ul class="list-item-description">
-                    <li>
-                        <p class="desc">Title: </p>
+        <!--<li class="list-item">-->
+            <!--<a href="https://en.wikipedia.org/wiki/War_and_Peace">-->
+                <!--<img src="images/WarAndPeace.jpg" alt="">-->
+                <!--<ul class="list-item-description">-->
+                    <!--<li>-->
+                        <!--<p class="desc">Title: </p>-->
 
-                        <p class="title">War and Peace</p>
-                    </li>
+                        <!--<p class="title">War and Peace</p>-->
+                    <!--</li>-->
 
-                    <li>
-                        <p class="desc">Authors: </p>
+                    <!--<li>-->
+                        <!--<p class="desc">Authors: </p>-->
 
-                        <p class="authors">Nikolai Ostrovsky</p>
-                    </li>
+                        <!--<p class="authors">Nikolai Ostrovsky</p>-->
+                    <!--</li>-->
 
-                    <li>
-                        <p class="desc">Pages: </p>
+                    <!--<li>-->
+                        <!--<p class="desc">Pages: </p>-->
 
-                        <p class="pages">1,225</p>
-                    </li>
+                        <!--<p class="pages">1,225</p>-->
+                    <!--</li>-->
 
-                    <li>
-                        <p class="desc">Publication Company:</p>
+                    <!--<li>-->
+                        <!--<p class="desc">Publication Company:</p>-->
 
-                        <p class="publication"> The Russian Messenger</p>
-                    </li>
+                        <!--<p class="publication"> The Russian Messenger</p>-->
+                    <!--</li>-->
 
-                    <li>
-                        <p class="desc">Year of Publication:</p>
+                    <!--<li>-->
+                        <!--<p class="desc">Year of Publication:</p>-->
 
-                        <p class="year">1865</p>
-                    </li>
+                        <!--<p class="year">1865</p>-->
+                    <!--</li>-->
 
-                    <li>
-                        <p class="desc">Date of Edition: </p>
+                    <!--<li>-->
+                        <!--<p class="desc">Date of Edition: </p>-->
 
-                        <p class="edition">1869</p>
-                    </li>
+                        <!--<p class="edition">1869</p>-->
+                    <!--</li>-->
 
-                    <li>
-                        <p class="desc">ISBN: </p>
+                    <!--<li>-->
+                        <!--<p class="desc">ISBN: </p>-->
 
-                        <p class="isbn">978-1-85326-062-9 </p>
-                    </li>
+                        <!--<p class="isbn">978-1-85326-062-9 </p>-->
+                    <!--</li>-->
 
-                    <li class="list-item-description-buttons">
-                        <div class="manage">
-                            <a href="#"><button class="edit">Edit</button></a>
-                            <a href="#"><button class="remove">Delete</button></a>
-                        </div>
-                    </li>
-                </ul>
-            </a>
-        </li>
+                    <!--<li class="list-item-description-buttons">-->
+                        <!--<div class="manage">-->
+                            <!--<a href="#"><button class="edit">Edit</button></a>-->
+                            <!--<a href="#"><button class="remove">Delete</button></a>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</a>-->
+        <!--</li>-->
     </ul>
 <div class="add-new-book">
-    <label>Now there are 2 books. You can add new one. Just click this button</label>
-    <a href="add-new-book-to-list.html" target="_blank"><button>Add a book</button></a>
+    <label>Now there are  books. You can add new one. Just click this button</label>
+    <a href="add-new-book-to-list.html" target="_blank"><button id="book-adition">Add a book</button></a>
 </div>
     </div>
 <footer>
     <p>Copyright &copy;2016 - Viktor Salnichenko</p>
 </footer>
+<div class="background-gray-color" id="background-gray-color">
+    <div class="pop-up" id="pop-up">
+
+    </div>
+</div>
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 <script src="./node_modules/jquery-validation/dist/jquery.validate.js"></script>
 <script src="scripts/form-add-validation.js"></script>
+<script src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.min.js"></script>
 </body>
 </html>

@@ -9,3 +9,5 @@
 @import "add-book.css";
 @import "add-new-book-page-error-p.css";
 @import "add-new-book-button.css";
+@import "../states/animate.css";
+@import "popup-styles.css";

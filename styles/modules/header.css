@@ -20,4 +20,26 @@ header p {
     text-align: center;
     /*font-weight: bold;*/
     color: #037bac;
+    margin: 0 auto;
+    padding: 0;
+    width: 800px;
 }
+
+#edit-title-of-page {
+    margin-left: 48%;
+    width: 100px;
+    height: 30px;
+    background-color: #4294f0;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    transition: all ease-in-out .3s;
+}
+
+#edit-title-of-page:hover {
+    background-color: #fff;
+    color: #4294f0;
+    font-weight: bold;
+    border: 1px solid #4294f0;
+}
+
