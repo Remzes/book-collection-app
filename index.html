@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <title>My Book Collection</title>
     <link rel="stylesheet" href="styles/modules/index.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
 </head>
 <body>
 <header>
-    <p>My Book Collection - List of Books</p>
+    <p id="the-highest-title"></p>
     <button class="edit-title-button" id="edit-title-of-page">Edit Title</button>
 </header>
 <nav class="navigation">
@@ -139,11 +141,9 @@
 <footer>
     <p>Copyright &copy;2016 - Viktor Salnichenko</p>
 </footer>
-<div class="background-gray-color" id="background-gray-color">
+<div class="background-gray-color" id="background-gray-color"></div>
     <div class="pop-up" id="pop-up">
-
     </div>
-</div>
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 <script src="./node_modules/jquery-validation/dist/jquery.validate.js"></script>
 <script src="scripts/form-add-validation.js"></script>

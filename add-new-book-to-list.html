@@ -12,7 +12,7 @@
 <div class="container" id="add-book-check">
     <form class="add-book" action="" method="post" id="register-form" novalidate="novalidate">
         <div class="inner-content">
-        <img src="images/HowTheSteelWasTempered.jpg" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Question_mark.svg/200px-Question_mark.svg.png" alt="" class="image-on-the-add-book-page">
         <ul class="list-item-description list-item-description-margin ">
             <li>
                 <p class="desc-in-form">Title: </p>
@@ -70,6 +70,7 @@
             <p class="error" id="isbn-format">A format of ISBN is not right</p>
         </ul>
             </div>
+        <input type="file" onchange="previewFile()">
         <button class="add-new-book-button" id="add-but">Add new book</button>
     </form>
 </div>

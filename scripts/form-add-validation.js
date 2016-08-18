@@ -4,7 +4,7 @@
 var validation = {};
 var checkCounter = [];
 var count = 0;
-for (var i = 0; i <= 11; i++){
+for (var i = 0; i <= 11; i++) {
     checkCounter[i] = false;
 }
 
@@ -246,55 +246,55 @@ function detectThePageListItems() {
 }
 
 /*
-* sort books by the year of publication
-* */
-function sortBooksByYearPublication(e){
+ * sort books by the year of publication
+ * */
+function sortBooksByYearPublication(e) {
     e.preventDefault();
     var storage = getStorage();
-    var tempSortedObject = _.sortBy(storage, function(item){
+    var tempSortedObject = _.sortBy(storage, function (item) {
         return item.year;
     });
     var liArr = document.querySelectorAll("li.list-item");
-    liArr.forEach(function(element, index){
-       element.remove();
-    });
-    tempSortedObject.forEach(function(element, index){
-       insertDataToNewListItem(element);
-    });
-    var newLiArr = document.querySelectorAll("li.list-item");
-    newLiArr.forEach(function(element, index){
-       $(element).addClass("animated fadeInLeft");
-    });
-}
-
-function sortBooksByTitle(e){
-    e.preventDefault();
-    var storage = getStorage();
-    var tempSortedObject = _.sortBy(storage, function(item){
-        return item.title;
-    });
-    var liArr = document.querySelectorAll("li.list-item");
-    liArr.forEach(function(element, index){
+    liArr.forEach(function (element, index) {
         element.remove();
     });
-    tempSortedObject.forEach(function(element, index){
+    tempSortedObject.forEach(function (element, index) {
         insertDataToNewListItem(element);
     });
     var newLiArr = document.querySelectorAll("li.list-item");
-    newLiArr.forEach(function(element, index){
+    newLiArr.forEach(function (element, index) {
+        $(element).addClass("animated fadeInLeft");
+    });
+}
+
+function sortBooksByTitle(e) {
+    e.preventDefault();
+    var storage = getStorage();
+    var tempSortedObject = _.sortBy(storage, function (item) {
+        return item.title;
+    });
+    var liArr = document.querySelectorAll("li.list-item");
+    liArr.forEach(function (element, index) {
+        element.remove();
+    });
+    tempSortedObject.forEach(function (element, index) {
+        insertDataToNewListItem(element);
+    });
+    var newLiArr = document.querySelectorAll("li.list-item");
+    newLiArr.forEach(function (element, index) {
         $(element).addClass("animated fadeInRight");
     });
 }
 
 function insertDataToNewListItem(object) {
-    var element = '<li class="list-item" data-id='+object.uniqId+'> ' +
+    var element = '<li class="list-item" data-id=' + object.uniqId + '> ' +
         '<a href="https://en.wikipedia.org/wiki/War_and_Peace"> ' +
-        '<img src="images/WarAndPeace.jpg" alt=""> ' +
+        '<img src="" alt="" data-id='+ object.uniqId +'> ' +
         '<ul class="list-item-description">' +
         ' <li> <p class="desc">Title: </p> <p class="title">' + object.title + '</p> </li>' +
         ' <li> <p class="desc">Authors: </p> <p class="authors">' + object.authors + '</p> </li> ' +
         '<li><p class="desc">Pages: </p> <p class="pages">' + object.pages + '</p> </li> ' +
-        '<li> <p class="desc">Publication Company:</p> <p class="publication">'+ object.publication +'</p> </li> ' +
+        '<li> <p class="desc">Publication Company:</p> <p class="publication">' + object.publication + '</p> </li> ' +
         '<li> <p class="desc">Year of Publication:</p> <p class="year">' + object.year + '</p> </li>' +
         ' <li> <p class="desc">Date of Edition: </p> <p class="edition">' + object.edition + '</p> </li>' +
         ' <li> <p class="desc">ISBN: </p> <p class="isbn">' + object.isbn + '</p> </li>' +
@@ -331,8 +331,8 @@ function deleteBook(e) {
 //}
 
 /*
-* This function takes the info about the chosen to edit book and puts into the new localStorage called DBId
-* */
+ * This function takes the info about the chosen to edit book and puts into the new localStorage called DBId
+ * */
 function editThisBook(e) {
     e.preventDefault();
     var id = $(this).data("id");
@@ -350,8 +350,8 @@ function editThisBook(e) {
 }
 
 /*
-* This  function takes the info of the book which you re gonna edit and use "fillAllFields" function
-* */
+ * This  function takes the info of the book which you re gonna edit and use "fillAllFields" function
+ * */
 function addEditInfo() {
     if ($("#add-book-check").length && localStorage.getItem("DBId")) {
         document.getElementById("add-but").innerHTML = "Save Changings";
@@ -369,8 +369,8 @@ function addEditInfo() {
 }
 
 /*
-*
-* */
+ *
+ * */
 function ChangeInfoInLocalStorage(e) {
     e.preventDefault();
     var storage = getStorage();
@@ -391,8 +391,8 @@ function ChangeInfoInLocalStorage(e) {
 }
 
 /*
-* When you edit the existed book, this function adds values to the input fields
-* */
+ * When you edit the existed book, this function adds values to the input fields
+ * */
 function fillAllFields(object) {
     if ($("#add-book-check").length && localStorage.getItem("DBId")) {
         document.getElementById("title-of-book").value = object.title;
@@ -406,8 +406,8 @@ function fillAllFields(object) {
 }
 
 /*
-* To clear the local storage (DBId)
-* */
+ * To clear the local storage (DBId)
+ * */
 function clearDBId() {
     localStorage.removeItem("DBId");
 }
@@ -416,8 +416,8 @@ addEditInfo();
 detectThePageListItems();
 
 /*
-* Open popup to change a title of the page
-* */
+ * Open popup to change a title of the page
+ * */
 function openPopUp() {
     setTimeout(function () {
         $("#background-gray-color").addClass("active");
@@ -428,19 +428,80 @@ function openPopUp() {
 
 
 /*
-* Close popup to change a title of the page
-* */
+ * Close popup to change a title of the page
+ * */
 function clPopUp() {
     $("#pop-up").removeClass("animated fadeInUp");
     $("#pop-up").removeClass("active");
     $("#background-gray-color").removeClass("active");
+    document.getElementById("if-title-exist").style.display = "none";
+}
+
+
+/*
+* Creates all elements inside the popup and then took an old title from local storage
+* */
+function changeTitleOfThePage() {
+    var oldTitle = {};
+    if (!localStorage.getItem('title-name')) {
+        oldTitle = 'My Book Collection - List of Books';
+    } else {
+        oldTitle = JSON.parse(localStorage.getItem("title-name"))
+    }
+    var popupInside = '<h1 class="old-title">' + oldTitle.title + '</h1> ' +
+        '<p class="desc-of-this">This is old tile of the page</p>' +
+        '<input type="text" id="new-title" class="new-title-input">' +
+        '<p class="errorHere animated bounceIn" id="if-title-exist">Please, type the title of the page</p>' +
+        '<p class="desc-of-this">Please, type here a new title of the page</p>' +
+        '<button class="save-title" id="save-title">Save Title</button>';
+    $("#pop-up").append(popupInside);
 }
 
 /*
-* 
+* Change the title on the main page and then reloads a page
 * */
+function setNewTitle() {
+    if (document.getElementById("new-title").value) {
+        var titleObj = {
+            title: document.getElementById("new-title").value,
+            dateOfChange: Date.now()
+        };
+        localStorage.setItem("title-name", JSON.stringify(titleObj));
+        redirectTo("index.html");
+    } else {
+        document.getElementById("if-title-exist").style.display = "block";
+    }
+}
+
+/*
+* Saves the new title permanently
+* */
+function appendNewTitle(){
+    var title = JSON.parse(localStorage.getItem("title-name"));
+    document.getElementById("the-highest-title").innerHTML = title.title;
+}
+
+function previewFile(){
+    var preview = document.querySelector('img');
+    var file    = document.querySelector('input[type=file]').files[0];
+    var reader  = new FileReader();
+
+    reader.addEventListener("load", function () {
+        preview.src = reader.result;
+    }, false);
+
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+    validation.picture = file;
+}
+
 
 function setUpPage() {
+    if ($("#the-highest-title").length) {
+        appendNewTitle();
+        changeTitleOfThePage();
+    }
     $("#title-of-book").on("change", checkLengthOfTitle);
     $("#title-of-book").on("change", checkTheFirstLetterOfTitle);
     $("#pages-of-book").on("change", checkTheValidityOfInput);
@@ -464,7 +525,9 @@ function setUpPage() {
         $("#add-but").on("click", checkEverything);
     }
     $("#edit-title-of-page").on("click", openPopUp);
+    //$("#edit-title-of-page").on("click", changeTitleOfThePage);
     $("#background-gray-color").on("click", clPopUp);
+    $("#save-title").on("click", setNewTitle);
 }
 
 window.addEventListener("load", setUpPage, false);

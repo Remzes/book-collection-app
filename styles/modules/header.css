@@ -26,9 +26,12 @@ header p {
 }
 
 #edit-title-of-page {
-    margin-left: 48%;
-    width: 100px;
-    height: 30px;
+
+    width: 200px;
+    height: 40px;
+    margin-left: -100px;
+    position: relative;
+    left: 50%;
     background-color: #4294f0;
     border: none;
     color: white;

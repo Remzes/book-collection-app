@@ -4,7 +4,7 @@
     left: 0;
     width: 0;
     height: 0;
-    z-index: 1000;
+    z-index: 100;
     background-color: rgba(0, 0, 0, 0.85);
     pointer-events: none;
     transition: all ease-in-out 0.3s;
@@ -15,15 +15,15 @@
     height: 500px;
     background-color: #fff;
     position: fixed;
-    z-index: 1001;
-    left: 35%;
+    z-index: 1002;
+    left: 50%;
     top: 50%;
     /*-webkit-transform: translate(-50%, -50%);*/
     /*-moz-transform: translate(-50%, -50%);*/
     /*-ms-transform: translate(-50%, -50%);*/
     /*-o-transform: translate(-50%, -50%);*/
     /*transform: translate(-50%, -50%);*/
-    margin-left: -175px;
+    margin-left: -425px;
     margin-top: -250px;
     opacity: 0;
     pointer-events: none;
@@ -34,6 +34,20 @@
     /*transition: all ease-in-out 0.3s;*/
 }
 
+.new-title-input {
+    clear:both;
+}
+.errorHere {
+    text-transform: uppercase;
+
+    color: red;
+    display: none;
+}
+
+.pop-up h1 {
+    color: #000;
+}
+
 .active {
     opacity: 1;
     pointer-events: auto;
@@ -42,4 +56,8 @@
 .background-gray-color.active {
     width: 100%;
     height: 100%;
+}
+
+.desc-of-this {
+    color: #000;
 }
