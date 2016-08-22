@@ -4,82 +4,74 @@
     <meta charset="UTF-8">
     <title>My Book Collection</title>
     <link rel="stylesheet" href="styles/modules/index.css">
+    <!--<script src="./node_modules/jquery/dist/jquery.min.js"></script>-->
+    <script src="http://ajax.aspnetcdn.com/ajax/JQuery/jquery-3.1.0.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
 </head>
 <body>
 <header>
     <p>My Book Collection - Add New Book</p>
 </header>
 <div class="container" id="add-book-check">
-    <form class="add-book" action="" method="post" id="register-form" novalidate="novalidate">
+    <form class="add-book" action="" method="post" id="register-form">
         <div class="inner-content">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Question_mark.svg/200px-Question_mark.svg.png" alt="" class="image-on-the-add-book-page">
-        <ul class="list-item-description list-item-description-margin ">
-            <li>
-                <p class="desc-in-form">Title: </p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Question_mark.svg/200px-Question_mark.svg.png"
+                 alt="" class="image-on-the-add-book-page">
+            <ul class="list-item-description list-item-description-margin ">
+                <li>
+                    <p class="desc-in-form">Title: </p>
 
-                <input type="text" name="title_of_book" id="title-of-book"> <!-- TITLE INPUT -->
-            </li>
-            <p class="error" id="title-uppercase-letter">The first letter must be uppercase</p>
+                    <input type="text" name="title" id="title-of-book" class="form-group"> <!-- TITLE INPUT -->
+                </li>
+                <li>
+                    <p class="desc-in-form">Authors: </p>
 
-            <p class="error" id="title-max-length">The length of the title must be less than 50 signs</p>
-            <li>
-                <p class="desc-in-form">Authors: </p>
+                    <input type="text" name="authors" id="authors" class="form-group">
+                </li>
 
-                <input type="text" name="authors" id="authors">
-            </li>
-            <p class="error" id="authors-uppercase-letter">The first letters must be uppercase</p>
+                <li>
+                    <p class="desc-in-form">Pages: </p>
 
-            <p class="error" id="authors-max-length">The length of the name or surname must be less than 20 signs</p>
+                    <input type="text" id="pages-of-book" name="pages" class="form-group"> <!-- PAGES INPUT -->
+                </li>
 
-            <p class="error" id="authors-full-name">It must contain full name of author(s)</p>
-            <li>
-                <p class="desc-in-form">Pages: </p>
+                <li>
+                    <p class="desc-in-form">Publication Company:</p>
 
-                <input type="text" id="pages-of-book"> <!-- PAGES INPUT -->
-            </li>
-            <p class="error" id="pages-data-type">Type only the integer number of pages</p>
+                    <input type="text" id="publication-company-of-book" name="publication" class="form-group"> <!-- PUBLICATION COMPANY -->
+                </li>
+                <li>
+                    <p class="desc-in-form">Year of Publication:</p>
 
-            <p class="error" id="pages-max-length">The number of pages must be less than 10000</p>
+                    <input type="text" id="publication-year-of-book" name="year" class="form-group">
+                </li>
 
-            <p class="error" id="pages-min-length">The number of pages must be more than 0</p>
-            <li>
-                <p class="desc-in-form">Publication Company:</p>
+                <li>
+                    <p class="desc-in-form">Date of Edition: </p>
 
-                <input type="text" id="publication-company-of-book"> <!-- PUBLICATION COMPANY -->
-            </li>
-            <p class="error" id="publication-company-max-length">It must contain less than 30 signs</p>
-            <li>
-                <p class="desc-in-form">Year of Publication:</p>
+                    <input type="text" id="date-of-edition" name="edition" class="form-group">
+                </li>
 
-                <input type="text" id="publication-year-of-book">
-            </li>
-            <p class="error" id="publication-year-min-year">Year must not be lower than 1800</p>
-            <p class="error" id="integer-year-input">It must contain only digits</p>
-            <li>
-                <p class="desc-in-form" >Date of Edition: </p>
+                <li>
+                    <p class="desc-in-form">ISBN: </p>
 
-                <input type="text" id="date-of-edition">
-            </li>
-            <p class="error" id="date-format">The date format must be 'mm-dd-yyyy'</p>
-            <p class="error" id="date-early">The date must not be lower than 01-01-1800</p>
-            <li>
-                <p class="desc-in-form">ISBN: </p>
+                    <input type="text" id="isbn" class="form-group" name="isbn">
+                </li>
 
-                <input type="text" id="isbn">
-            </li>
-            <p class="error" id="isbn-format">A format of ISBN is not right</p>
-        </ul>
-            </div>
+            </ul>
+        </div>
         <input type="file" onchange="previewFile()">
-        <button class="add-new-book-button" id="add-but">Add new book</button>
+        <button class="bookAdd-disabled" id="add-but">Add new book</button>
+        <button id="checkThis" class="save-details checkButton">Save Details</button>
     </form>
 </div>
 <footer class="fixed-footer">
     <p>Copyright &copy;2016 - Viktor Salnichenko</p>
 </footer>
-<script src="./node_modules/jquery/dist/jquery.min.js"></script>
-<script src="./node_modules/jquery-validation/dist/jquery.validate.js"></script>
 <script src="scripts/form-add-validation.js"></script>
+<!--<script src="scripts/register-form-jquery-validation.js"></script>-->
 <script src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.min.js"></script>
 </body>
 </html>

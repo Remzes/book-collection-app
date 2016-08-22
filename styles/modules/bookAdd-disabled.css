@@ -1,0 +1,14 @@
+.bookAdd-disabled {
+    height: 40px;
+    width: 150px;
+    font-size: 18px;
+    margin-right: 10px;
+    float: right;
+    background-color: #9a9a9a;
+    outline: none;
+    /*border: 1px #000 solid;*/
+    border: none;
+    /*box-shadow: 0 0 5px #000;*/
+    color: #000;
+    transition: all ease-in-out .3s;
+}
