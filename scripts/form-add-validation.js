@@ -2,6 +2,7 @@
  * Created by Администратор on 5/16/2016.
  */
 var validation = {};
+var imageBase64;
 
 function validationObjectFilling() {
     validation.title = document.getElementById("title-of-book").value;
@@ -129,7 +130,7 @@ function sortBooksByTitle(e) {
 function insertDataToNewListItem(object) {
     var element = '<li class="list-item" data-id=' + object.uniqId + '> ' +
         '<a href="#"> ' +
-        '<img src="" alt="" data-id=' + object.uniqId + '> ' +
+        '<img src=' + object.img + ' alt="" style="width:200px; height:323px" data-id=' + object.uniqId + '> ' +
         '<ul class="list-item-description">' +
         ' <li> <p class="desc">Title: </p> <p class="title">' + object.title + '</p> </li>' +
         ' <li> <p class="desc">Authors: </p> <p class="authors">' + object.authors + '</p> </li> ' +
@@ -217,6 +218,7 @@ function ChangeInfoInLocalStorage(e) {
             element.year = document.getElementById("publication-year-of-book").value;
             element.edition = document.getElementById("date-of-edition").value;
             element.isbn = document.getElementById("isbn").value;
+            element.img = imageBase64;
         }
     });
     rewriteStorage(storage);
@@ -315,19 +317,44 @@ function appendNewTitle() {
     document.getElementById("the-highest-title").innerHTML = title.title;
 }
 
+//function previewFile() {
+//    var preview = document.querySelector('img');
+//    var file = document.querySelector('input[type=file]').files[0];
+//    var reader = new FileReader();
+//
+//    reader.addEventListener("load", function () {
+//        preview.src = reader.result;
+//    }, false);
+//
+//    if (file) {
+//        reader.readAsDataURL(file);
+//    }
+//    validation.picture = file;
+//}
+
 function previewFile() {
     var preview = document.querySelector('img');
-    var file = document.querySelector('input[type=file]').files[0];
-    var reader = new FileReader();
-
-    reader.addEventListener("load", function () {
-        preview.src = reader.result;
-    }, false);
-
-    if (file) {
-        reader.readAsDataURL(file);
+    var files   = document.querySelector('input[type=file]').files;
+    function readAndPreview(file) {
+        // Make sure `file.name` matches our extensions criteria
+        if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+            var reader = new FileReader();
+            reader.addEventListener("load", function () {
+                var image = new Image();
+                image.height = 100;
+                image.title = file.name;
+                //console.log(file);
+                preview.src = this.result;
+                validation.img = this.result;
+                imageBase64 = this.result;
+                //console.log(this.result);
+            }, false);
+            reader.readAsDataURL(file);
+        }
     }
-    validation.picture = file;
+    if (files) {
+        [].forEach.call(files, readAndPreview);
+    }
 }
 
 function checkAuthorName() {

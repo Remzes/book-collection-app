@@ -1,9 +1,1 @@
-.image-on-the-add-book-page {
-    width:200px;
-    height:323px;
-    float:left;
-}
-
-input[type="file"]{
-    float: left;
-}
+.image-on-the-add-book-page{width:200px;height:323px;float:left}input[type=file]{float:left}
